@@ -1,0 +1,16 @@
+package com.vlkn.adapterAgainstInterface;
+
+public class CarBehaviorThatFitMyNeeds {
+
+    public void iStart() {
+        System.out.println("I DO SOME AWESOME CALCULATIONS THAT THE CALCULATOR NEEDS, BUT MY METHOD SIGNATURE AND NAME IS DIFFERENT. " +
+                "SO YOU CREATED A NEW CLASS, EXTENDED ME AND IMPLEMENTED THE SAME INTERFACE AS THE CLIENT NEEDS." +
+                "FOR THAT REASON YOU CREATE A REF VARIABLE IN THE CLIENT TO THE INTERFACE INSTANTIATE THE ADAPTER CLASS AND DELEGATE/FORWARD THE METHOD CALL TO" +
+                "I FEEL YOU ARE TOO SMART :D"
+        );
+    }
+
+    public void iStop() {
+        System.out.println("THIS IS JUST ANOTHER EXAMPLE, NOW YOU NOW HOW TO USE THE ADAPTER PATTERN IN CLIENT CODE.");
+    }
+}
