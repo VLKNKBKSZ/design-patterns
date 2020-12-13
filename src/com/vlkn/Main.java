@@ -25,7 +25,6 @@ public class Main {
         display(jScrollPane, "Rockets");
 
 
-
     }
 
     private static void display(JComponent jComponent, String title) {
@@ -39,7 +38,7 @@ public class Main {
 
     private static JScrollPane getjScrollPane(JTable jTable) {
         JScrollPane jScrollPane = new JScrollPane(jTable);
-        jScrollPane.setPreferredSize(new Dimension(300,100));
+        jScrollPane.setPreferredSize(new Dimension(300, 100));
         return jScrollPane;
     }
 
@@ -51,12 +50,13 @@ public class Main {
     }
 
     private static RocketTableModel getRocketTableModel() {
-        Rocket rocket = new Rocket("Shooter",3.95, 50.0);
+        Rocket rocket = new Rocket("Shooter", 3.95, 50.0);
         Rocket rocket1 = new Rocket("Orbit", 29.03, 5000.0);
 
-        Rocket[] rockets = new Rocket[]{rocket,rocket1};
-        RocketTableModel rocketTableModel = new RocketTableModel(rockets);
-        return rocketTableModel;
+        Rocket[] rockets = new Rocket[]{rocket, rocket1};
+
+        return new RocketTableModel(rockets);
+
     }
 
     private static void setFonts() {
@@ -64,6 +64,4 @@ public class Main {
         UIManager.put("Table.font", font);
         UIManager.put("TableHeader.font", font);
     }
-
-
 }
