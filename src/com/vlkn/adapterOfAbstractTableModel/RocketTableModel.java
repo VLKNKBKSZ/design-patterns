@@ -1,5 +1,6 @@
 package com.vlkn.adapterOfAbstractTableModel;
 
+
 import javax.swing.table.AbstractTableModel;
 
 public class RocketTableModel extends AbstractTableModel {

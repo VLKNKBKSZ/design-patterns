@@ -1,4 +1,4 @@
-package com.vlkn.adapterAgainstInterface;
+package com.vlkn.classAdapterPattern;
 
 public class CarBehaviorThatFitMyNeeds {
 

@@ -1,9 +1,8 @@
 package com.vlkn;
 
-import com.vlkn.adapterAgainstInterface.AdapterCarBehavior;
-import com.vlkn.adapterAgainstInterface.Car;
 import com.vlkn.adapterOfAbstractTableModel.Rocket;
 import com.vlkn.adapterOfAbstractTableModel.RocketTableModel;
+import com.vlkn.objectAdapterPattern.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,11 +10,17 @@ import java.awt.*;
 public class Main {
 
     public static void main(String[] args) {
-        Car car = new Car(new AdapterCarBehavior());
+        // adapt a toycar to use a real car's methods
+        ToyCar toyCar = new CarAdapter(new Tesla());
+        toyCar.transformIntoRobot();
+        // adapt a car to use toycar methods
+        Car car  = new ToyCarAdapter(new ToyCarCezeri());
         car.start();
-        System.out.println("========");
         car.stop();
+        car.drive();
+    }
 
+    private static void runTableModelExample() {
         System.out.println("=========================================================================================");
         // Show Popup with Swing as example for a Object Adapter Patter based on using the abstract class.
         setFonts();
@@ -23,8 +28,6 @@ public class Main {
         JTable jTable = getjTable(rocketTableModel);
         JScrollPane jScrollPane = getjScrollPane(jTable);
         display(jScrollPane, "Rockets");
-
-
     }
 
     private static void display(JComponent jComponent, String title) {
