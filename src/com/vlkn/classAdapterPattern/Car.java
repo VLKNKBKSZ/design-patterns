@@ -1,17 +1,15 @@
 package com.vlkn.classAdapterPattern;
 
-public class Car implements Driveable {
+public class Car {
 
     public Car() {
     }
 
-    @Override
-    public void start() {
+    public void starting() {
         System.out.println("STANDARD STARTING OF A CARR");
     }
 
-    @Override
-    public void stop() {
+    public void stopping() {
         System.out.println("STANDARD STOPPING OF A CAR");
     }
 }
