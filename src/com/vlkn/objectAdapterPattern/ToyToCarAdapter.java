@@ -1,10 +1,10 @@
 package com.vlkn.objectAdapterPattern;
 
-public class ToyCarAdapter implements Car{
+public class ToyToCarAdapter implements Car{
 
     private final ToyCar toyCar;
 
-    public ToyCarAdapter(ToyCar toyCar) {
+    public ToyToCarAdapter(ToyCar toyCar) {
         this.toyCar = toyCar;
     }
 
