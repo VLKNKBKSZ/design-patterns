@@ -10,22 +10,29 @@ import java.awt.*;
 public class Main {
 
     public static void main(String[] args) {
+
+    }
+
+    private static void adapterPatternExample() {
         // adapt a toycar to use a real car's methods
         ToyCar toyCar = new CarToToycarAdapter(new Tesla());
 
         // adapt a car to use toycar methods
-        Car car  = new ToyToCarAdapter(new ToyCarCezeri());
+        Car car = new ToyToCarAdapter(new ToyCarCezeri());
 
         startCar(car);
         startToyCar(toyCar);
+
     }
 
     private static void startToyCar(ToyCar toyCar) {
         toyCar.transformIntoRobot();
     }
+
     private static void startCar(Car car) {
         car.start();
     }
+
     private static void runTableModelExample() {
         System.out.println("=========================================================================================");
         // Show Popup with Swing as example for a Object Adapter Patter based on using the abstract class.
