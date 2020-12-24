@@ -7,6 +7,10 @@ import java.util.List;
 @Data
 public class MachineComposite implements MachineComponent {
 
+    private boolean isUp;
+    private int owner;
+    private String material;
+
     private List<MachineComponent> machineComponentList;
 
     public MachineComposite(List<MachineComponent> machineComponentList) {
@@ -25,21 +29,45 @@ public class MachineComposite implements MachineComponent {
 
     @Override
     public boolean isCompletelyUp() {
-        return false;
+
+        boolean main = false;
+        for(MachineComponent machineComponent : machineComponentList) {
+            main=machineComponent.isCompletelyUp();
+        }
+        return main;
     }
 
     @Override
     public void stopAll() {
 
+        for(MachineComponent machineComponent : machineComponentList) {
+            stopMachine();
+        }
     }
 
     @Override
     public int getOwners() {
-        return 0;
+
+        var owners = 0;
+
+        for(MachineComponent machineComponent : machineComponentList) {
+            owners+=machineComponent.getOwners();
+        }
+
+        return owners;
     }
 
     @Override
     public String getMaterial() {
-        return null;
+        StringBuilder result = new StringBuilder();
+        for(MachineComponent machineComponent : machineComponentList) {
+            result.append(machineComponent.getMaterial());
+        }
+        return  result.toString();
+    }
+
+    private void stopMachine()
+    {
+        System.out.println("===MACHINE STOPPED===");
     }
 }

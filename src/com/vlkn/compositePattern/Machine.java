@@ -6,6 +6,8 @@ import lombok.Data;
 public class Machine implements  MachineComponent{
 
     private boolean isUp;
+    private int owner;
+    private String material;
 
     @Override
     public int getMachineCount() {
@@ -24,11 +26,11 @@ public class Machine implements  MachineComponent{
 
     @Override
     public int getOwners() {
-        return 0;
+        return 1;
     }
 
     @Override
     public String getMaterial() {
-        return null;
+        return material;
     }
 }
