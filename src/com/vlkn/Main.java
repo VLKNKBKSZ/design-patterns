@@ -2,14 +2,35 @@ package com.vlkn;
 
 import com.vlkn.adapterOfAbstractTableModel.Rocket;
 import com.vlkn.adapterOfAbstractTableModel.RocketTableModel;
+import com.vlkn.compositePattern.Machine;
+import com.vlkn.compositePattern.MachineComponent;
+import com.vlkn.compositePattern.MachineComposite;
 import com.vlkn.objectAdapterPattern.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
+
+        MachineComponent machineComponent = new Machine();
+        MachineComponent machineComponent2 = new Machine();
+
+        List<MachineComponent> machineComponentList = new ArrayList<>();
+
+        machineComponentList.add(machineComponent);
+        machineComponentList.add(machineComponent2);
+
+
+
+
+        MachineComposite machineComposite = new MachineComposite(machineComponentList);
+        MachineComposite machineCompositeMultipleItems = new MachineComposite(machineComposite.getMachineComponentList());
+        System.out.printf("======MACHINE COUNT====== %s%n",machineCompositeMultipleItems.getMachineCount());
+
 
     }
 
