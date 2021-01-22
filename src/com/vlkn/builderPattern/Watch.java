@@ -24,7 +24,7 @@ public class Watch {
         this.isSapphireGlass = builder.isSapphireGlass;
     }
 
-    public class Builder{
+    public static class Builder{
 
         //required fields
 
