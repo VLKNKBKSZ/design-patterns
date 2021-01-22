@@ -10,3 +10,4 @@ Facade Pattern use cases:
   used to simplify usage of a large framework/class(it will give you less functionality to work with but everything the client needs).
   used when you want to strucure a subsystem/framework into layers of functionality.
 Bridge Pattern is a structural design pattern that lets you split a large class or a set of closely related classes into two separate hierarchies—abstraction and implementation—which can be developed independently of each other
+Builder pattern should be used when the parameter list of a constructor is longer than 5/6 fields. In that case a telescope pattern could be used but is not scalable. A javabeans construction could be used but isn't garantee consistent state and thread safety. In that case use the builder pattern with a fluent api imp should be the best case.
