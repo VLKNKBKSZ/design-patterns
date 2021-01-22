@@ -2,6 +2,7 @@ package com.vlkn;
 
 import com.vlkn.adapterOfAbstractTableModel.Rocket;
 import com.vlkn.adapterOfAbstractTableModel.RocketTableModel;
+import com.vlkn.builderPattern.Watch;
 import com.vlkn.compositePattern.Machine;
 import com.vlkn.compositePattern.MachineComponent;
 import com.vlkn.compositePattern.MachineComposite;
@@ -15,6 +16,8 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
+
+        Watch watch = new Watch.Builder("wer","wwrewe123",123).build();
         MachineComponent leaf = new Machine();
         MachineComponent leaf1 = new Machine();
         MachineComponent leaf2 = new Machine();

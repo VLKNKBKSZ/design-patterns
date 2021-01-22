@@ -60,7 +60,7 @@ public class Watch {
             return this;
         }
 
-        public Watch build(Builder builder) {
+        public Watch build() {
             return new Watch(this);
         }
     }
