@@ -1,6 +1,14 @@
 package com.vlkn.compositePattern;
 
 public interface MachineComponent {
+    int getMachineCount();
 
-    public int getMachineCount();
+    boolean isCompletelyUp();
+
+    void stopAll();
+
+    int getOwners();
+
+    String getMaterial();
 }
+

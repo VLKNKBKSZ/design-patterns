@@ -34,6 +34,22 @@ public class Main {
         System.out.println(machineComposite1.getMachineComponentList().size());
         machineComposite1.getMachineCount();
 
+        MachineComponent machineComponent = new Machine();
+        MachineComponent machineComponent2 = new Machine();
+
+        List<MachineComponent> machineComponentList = new ArrayList<>();
+
+        machineComponentList.add(machineComponent);
+        machineComponentList.add(machineComponent2);
+
+
+
+
+        MachineComposite machineComposite = new MachineComposite(machineComponentList);
+        MachineComposite machineCompositeMultipleItems = new MachineComposite(machineComposite.getMachineComponentList());
+        System.out.printf("======MACHINE COUNT====== %s%n",machineCompositeMultipleItems.getMachineCount());
+
+
     }
 
     private static void adapterPatternExample() {
