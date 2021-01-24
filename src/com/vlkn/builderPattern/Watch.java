@@ -14,7 +14,7 @@ public class Watch {
     private final String color;
     private final boolean isSapphireGlass;
 
-    public Watch(Builder builder) {
+    private Watch(Builder builder) {
         this.name = builder.name;
         this.model = builder.model;
         this.price = builder.price;
